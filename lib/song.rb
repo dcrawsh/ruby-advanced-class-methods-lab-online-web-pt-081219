@@ -45,6 +45,12 @@ self.find_by_name(search) || self.create_by_name(search)
 def self.alphabetical
     self.all.sort_by{|s| s.name}
   end
- end  
+
+def self.new_from_filename(song_string)
+song_string.split("-")
+
+end  
+binding.pry  
+ 
  
   
