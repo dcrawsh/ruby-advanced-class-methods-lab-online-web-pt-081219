@@ -47,9 +47,9 @@ def self.alphabetical
   end
 
 def self.new_from_filename(song_string)
-data = song_string.split("-").delete_prefix(" ")
-artist_name = data[0]
-song_name = data[1].delete_suffix(".mp3")
+data = song_string.split("-")
+artist_name = data[0].delete_suffix(" ")
+song_name = data[1].delete_suffix(".mp3").delete_pre
 artist_name && song_name
 end  
 binding.pry  
