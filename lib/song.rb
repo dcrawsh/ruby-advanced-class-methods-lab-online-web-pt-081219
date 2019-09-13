@@ -41,7 +41,7 @@ def self.find_or_create_by_name(search)
  if @@all.include?(search) 
  self.find_by_name(search)
  else 
- self.create_by_name
+ self.create_by_name(search)
 
  end 
  end
