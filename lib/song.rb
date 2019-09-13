@@ -54,6 +54,7 @@ song_name = data[1].delete_suffix!(".mp3").delete_prefix!(" ")
 song = self.create
 artist_name = song.artist_name
 song_name = song.name
+song
 end  
  
  
