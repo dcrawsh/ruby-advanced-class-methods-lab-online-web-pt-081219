@@ -46,15 +46,15 @@ def self.alphabetical
     self.all.sort_by{|s| s.name}
   end
 
-def self.new_from_filename(song_string)
-data = song_string.split("-")
-artist_name = data[0].delete_suffix!(" ")
-song_name = data[1].delete_suffix!(".mp3").delete_prefix!(" ")
+def self.new_from_filename(filename)
+parts = filename.split(" - ")
+    artist_name = parts[0]
+    song_name = parts[1].gsub(".mp3", "")
 
-song = self.create
-artist_name = song.artist_name
-song_name = song.name
-song
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
+    song
 end  
  
  
