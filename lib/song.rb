@@ -49,7 +49,7 @@ def self.alphabetical
 def self.new_from_filename(song_string)
 data = song_string.split("-")
 artist_name = data[0]
-song_name = data[1].delete_suffix("/.\/")
+song_name = data[1].delete_suffix("/\.\w+/")
 end  
 binding.pry  
  
