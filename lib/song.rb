@@ -42,8 +42,8 @@ self.find_by_name(search) || self.create_by_name(search)
   end
 
 def self.alphabetical
-@all.sort
- 
+@all.sort_by{|name| song.name}
+ end 
  end  
  
   
