@@ -69,7 +69,7 @@ parts = filename.split(" - ")
 end  
 
 def self.destroy_all
-@@all.
+self.all.clear
 end   
 
 end   
