@@ -48,8 +48,8 @@ def self.alphabetical
 
 def self.new_from_filename(song_string)
 data = song_string.split("-")
-data[0] = artist_name
-data[1] = song_name 
+artist_name = data[0]
+song_name = data[1].gsub!
 end  
 binding.pry  
  
